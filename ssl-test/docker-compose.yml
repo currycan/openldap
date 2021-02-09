@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  nginx:
+    image: nginx:1.18.0
+    container_name: nginx
+    # command: ping localhost
+    restart: always
+    ports:
+      - "443:443"
+    extra_hosts:
+    - "web.ztaoz.com:10.177.37.107"
+    volumes:
+      - ./certs/ztaoz.com.crt:/etc/nginx/ssl/server.crt
+      - ./certs/ztaoz.com.key:/etc/nginx/ssl/server.key
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ./config/web.conf:/etc/nginx/conf.d/web.conf
+      - ./3DCEList:/home/wwwroot/3DCEList
