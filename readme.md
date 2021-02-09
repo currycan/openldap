@@ -161,15 +161,18 @@ ldapsearch -H "ldaps://${LDAP_DOMAIN}" -b "${LDAP_BASE_DN}" -D "cn=admin,${LDAP_
 
 ## 2.3 web 控制台管理工具
 
-phpldapadmin：
+- phpldapadmin：
 
-管理员账号: cn=admin,dc=example,dc=com
-管理员账号: 8a%.BsgfC~d)1UJx
+  管理员账号: cn=admin,dc=example,dc=com
 
-ldap-account-manager：
+  管理员账号: 8a%.BsgfC~d)1UJx
 
-管理员账号: admin
-管理员账号: 8a%.BsgfC~d)1UJx
-lam密码：HO%c42#Tzj4z0F0Y
+- ldap-account-manager：
+
+  管理员账号: admin
+
+  管理员账号: 8a%.BsgfC~d)1UJx
+
+  lam密码：HO%c42#Tzj4z0F0Y
 
 推荐是用 ldap-account-manager 进行配置管理
