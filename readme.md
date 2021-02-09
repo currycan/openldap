@@ -2,7 +2,7 @@
 
 ## 1. 证书申请
 
-准备域名
+准备公网域名
 
 ## 1.1 安装 acme.sh
 
@@ -90,8 +90,11 @@ acme.sh --installcert --force -d ${DOMAIN} -d *.${DOMAIN} --key-file ${CERT_PATH
   - 客户端连接LDAP时，需要指明通讯类型为TLS，所以他可以跟不加密的模式一样，任意端口都行
 
 对比一下连接方式：
-ldaps： ldapsearch -H ldaps://127.0.0.1
-TLS:   ldapsearch -ZZ -H ldap://127.0.0.1
+
+```bash
+ldaps： ldapsearch -H ldaps://127.0.0.1:636
+tls:   ldapsearch -ZZ -H ldap://127.0.0.1:389
+```
 
 LDAP目录服务是以明文的方式在网络中传输数据的（包括密码），这样真的很不安全，因此需要使用TLS加密避免明文传输
 
@@ -134,13 +137,10 @@ docker-compose down && docker volume prune -f && rm -rf ldap/ && docker-compose 
 LDAP_BASE_DN="dc=example,dc=com"
 LDAP_DOMAIN="ldap.example.com"
 
-ldapsearch -H "ldap://${LDAP_DOMAIN}:389" -x -D "cn=admin,${LDAP_BASE_DN}" -w '8a%.BsgfC~d)1UJx'
-ldapwhoami -H "ldaps://${LDAP_DOMAIN}:636" -D "cn=admin,${LDAP_BASE_DN}" -w '8a%.BsgfC~d)1UJx'
-
-ldapwhoami -ZZ -H "ldap://${LDAP_DOMAIN}" -D "cn=admin,${LDAP_BASE_DN}" -w '8a%.BsgfC~d)1UJx'
-
 ldapsearch -Q -LLL -Y EXTERNAL -H ldapi:/// -b cn=config dn
-ldapsearch -x -H "ldap://localhost" -b "${LDAP_BASE_DN}" -D "cn=admin,${LDAP_BASE_DN}" -w'8a%.BsgfC~d)1UJx'
+ldapwhoami -ZZ -H "ldap://${LDAP_DOMAIN}" -D "cn=admin,${LDAP_BASE_DN}" -w '8a%.BsgfC~d)1UJx'
+ldapwhoami -H "ldaps://${LDAP_DOMAIN}" -D "cn=admin,${LDAP_BASE_DN}" -w '8a%.BsgfC~d)1UJx'
+
 ldapsearch -ZZ -H "ldap://${LDAP_DOMAIN}" -b "${LDAP_BASE_DN}" -D "cn=admin,${LDAP_BASE_DN}" -w'8a%.BsgfC~d)1UJx'
 ldapsearch -H "ldaps://${LDAP_DOMAIN}" -b "${LDAP_BASE_DN}" -D "cn=admin,${LDAP_BASE_DN}" -w'8a%.BsgfC~d)1UJx'
 ```
@@ -175,4 +175,4 @@ ldapsearch -H "ldaps://${LDAP_DOMAIN}" -b "${LDAP_BASE_DN}" -D "cn=admin,${LDAP_
 
   lam密码：HO%c42#Tzj4z0F0Y
 
-推荐是用 ldap-account-manager 进行配置管理
+推荐使用 ldap-account-manager 进行配置管理
