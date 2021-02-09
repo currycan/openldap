@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LLI</title>
+    <link href="css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/components.min.css" />
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="source/img/favicon.ico">
+</head>
+
+<body>
+    <div class="container" style="width: 960px;margin-top: 10px;">
+        <nav class="navbar navbar-default" role="navigation">
+            <a class="navbar-brand">LDAP管理地址</a>
+            <p class="text-right" style="font-size: 16px;padding: 20px 15px 0 15px;margin-bottom:0">
+            </p>
+        </nav>
+        <p class="text-right" style="margin-top: 20px;">
+            <button type="button" id="isNotifi" class="btn btn-lg">已关闭提示</button>
+        </p>
+        <!--动态渲染导航列表-->
+        <div id="menuList" class="row"></div>
+    </div>
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content" id="modal-content">
+                ...
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/pnotify.core.min.js"></script>
+<script type="text/javascript" src="js/app.main.js"></script>
+<script type="text/javascript" src="js/app.menuList.js"></script>
+
+</html>

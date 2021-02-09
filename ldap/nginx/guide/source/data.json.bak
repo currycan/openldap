@@ -1,0 +1,209 @@
+{
+  "titleList": [
+    {
+      "id": "",
+      "name": "基础地址",
+      "childList": [
+        {
+          "id": "",
+          "name": "团队协同",
+          "childList": [
+            {
+              "id": "",
+              "name": "Easy Mock",
+              "localUrl": "http://t420.lli.com:7300",
+              "outUrl": "http://t420.lli.com:7300",
+              "remark": "默认账号：admin <br> 密码： admin123 <br>"
+            },
+            {
+              "id": "",
+              "name": "跳板机---Jumpserver",
+              "localUrl": "http://t420.lli.com:6300",
+              "outUrl": "http://t420.lli.com:6300",
+              "remark": "默认账号：admin <br> 密码： admin <br>"
+            },
+            {
+              "id": "",
+              "name": "文件服务器--FastDFS",
+              "localUrl": "http://huashuo.lli.com:8888",
+              "outUrl": "http://huashuo.lli.com:8888",
+              "remark": "Nginx+FastDFS  静态文件服务器"
+            }
+          ]
+        },
+        {
+          "id": "",
+          "name": "版本管理",
+          "childList": [
+            {
+              "id": "",
+              "name": "代码仓库---GitLab",
+              "localUrl": "http://gitlab.lli.com:6200",
+              "outUrl": "http://gitlab.lli.com:6200",
+              "remark": "默认账号：姓名全拼 <br> 默认密码：姓名全拼(不足8位末尾补0) <br>"
+            },
+            {
+              "id": "",
+              "name": "Maven仓库---Nexus",
+              "localUrl": "http://yun.lli.com:6100",
+              "outUrl": "http://yun.lli.com:6100",
+              "remark": "默认账号：admin <br> 密码： admin123 <br>"
+            },
+            {
+              "id": "",
+              "name": "镜像仓库---Harbor",
+              "localUrl": "http://harbor.lli.com:6100",
+              "outUrl": "http://harbor.lli.com:6100",
+              "remark": "默认账号：admin <br> 密码： 123456 <br>"
+            }
+          ]
+        },
+        {
+          "id": "",
+          "name": "构建及质量管理",
+          "childList": [
+            {
+              "id": "",
+              "name": "Portainer",
+              "localUrl": "http://t420.lli.com:7100",
+              "outUrl": "http://t420.lli.com:7100",
+              "remark": "默认账号：admin  密码： admin123"
+            },
+            {
+              "id": "",
+              "name": "Jenkins",
+              "localUrl": "http://t420.lli.com:7000",
+              "outUrl": "http://t420.lli.com:7000",
+              "remark": "默认账号：admin  密码： admin"
+            },
+            {
+              "id": "",
+              "name": "Sonar",
+              "localUrl": "",
+              "outUrl": "",
+              "remark": "默认账号：admin  密码： admin"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "注册中心",
+      "childList": [
+        {
+          "id": "",
+          "name": "开发环境",
+          "childList": [
+            {
+              "id": "",
+              "name": "Eureka",
+              "localUrl": "http://t420.lli.com:7001/",
+              "outUrl": "http://t420.lli.com:7001/",
+              "remark": "Eureka注册中心-开发环境,账号:lli 密码:lli"
+            },
+            {
+              "id": "",
+              "name": "Consul",
+              "localUrl": "http://t420.lli.com:8500/",
+              "outUrl": "http://t420.lli.com:8500/",
+              "remark": "Consul注册中心-开发环境"
+            },
+            {
+              "id": "",
+              "name": "Zookeeper-zkui",
+              "localUrl": "http://t420.lli.com:9090/",
+              "outUrl": "http://t420.lli.com:9090/",
+              "remark": "Zookeeper-zkui"
+            },
+            {
+              "id": "",
+              "name": "Nacos",
+              "localUrl": "",
+              "outUrl": "",
+              "remark": ""
+            }
+          ]
+        },
+        {
+          "id": "",
+          "name": "UAT环境",
+          "childList": []
+        },
+        {
+          "id": "",
+          "name": "生产环境",
+          "childList": []
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "集群组件",
+      "childList": [
+        {
+          "id": "",
+          "name": "服务监控",
+          "childList": [
+            {
+              "id": "",
+              "name": "Dubbo-Admin",
+              "localUrl": "",
+              "outUrl": "",
+              "remark": "Dubbo微服务监控"
+            },
+            {
+              "id": "",
+              "name": "Spring Cloud Admin",
+              "localUrl": "http://t420.lli.com:8765/",
+              "outUrl": "http://t420.lli.com:8765/",
+              "remark": "Spring Cloud微服务监控"
+            }
+          ]
+        },
+        {
+          "id": "",
+          "name": "链路追踪",
+          "childList": []
+        },
+        {
+          "id": "",
+          "name": "系统日志",
+          "childList": []
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "个人网站",
+      "childList": [
+        {
+          "id": "",
+          "name": "腾讯云",
+          "childList": [
+            {
+              "id": "",
+              "name": "WIKI导航",
+              "localUrl": "http://yun.lli.com",
+              "outUrl": "http://140.143.140.139",
+              "remark": "WIKI导航"
+            }
+          ]
+        },
+        {
+          "id": "",
+          "name": "常用地址",
+          "childList": [
+            {
+              "id": "",
+              "name": "个人博客",
+              "localUrl": "https://haohao1121.github.io/",
+              "outUrl": "https://haohao1121.github.io/",
+              "remark": "Hexo 博客"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

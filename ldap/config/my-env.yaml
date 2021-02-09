@@ -1,0 +1,10 @@
+PHPLDAPADMIN_LDAP_HOSTS:
+  - ldap.ztaoz.com:
+    - server:
+      - tls: true
+      # - port: 389
+    - login:
+      - bind_id: cn=admin,dc=ztaoz,dc=com
+      - bind_pass: 8a%.BsgfC~d)1UJx
+  - ldap2.ztaoz.com
+  - ldap3.ztaoz.com

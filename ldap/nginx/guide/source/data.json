@@ -1,0 +1,42 @@
+{
+  "titleList": [
+    {
+      "id": "",
+      "name": "",
+      "childList": [
+        {
+          "id": "",
+          "name": "ldap-account-manager 地址",
+          "childList": [
+            {
+              "id": "",
+              "name": "ldap-account-manager",
+              "localUrl": "https://manager.ztaoz.com/lam/",
+              "outUrl": "https://manager.ztaoz.com/lam/",
+              "remark": "ldap-account-manager 地址"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "",
+      "name": "",
+      "childList": [
+        {
+          "id": "",
+          "name": "phpldapadmin 地址",
+          "childList": [
+            {
+              "id": "",
+              "name": "phpldapadmin",
+              "localUrl": "https://manager.ztaoz.com/admin/",
+              "outUrl": "https://manager.ztaoz.com/admin/",
+              "remark": "phpldapadmin 地址"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
