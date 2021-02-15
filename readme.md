@@ -116,6 +116,7 @@ TLSVerifyClient [never、allow、try、demand] 设置是否验证客户端发起
 - ldaps 是已经不再推荐使用的方式，建议使用 tls 双向认证
 - 双向认证仍然是 389 端口
 - ldapaccountmanager 控制台默认使用的是 ssl 也就是 ldaps 客户端
+- ldapaccountmanager 激活TLS可在管理台修改配置，修改389端口，开启tls
 
 [genKes.sh](./genKes.sh) 和 [](./genKes-2.sh) 用来生成 openldap 双向认证的密钥。任选其一
 

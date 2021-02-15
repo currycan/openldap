@@ -26,13 +26,15 @@ services:
       LDAP_TLS_KEY_FILENAME: "ldap.key"
       LDAP_TLS_DH_PARAM_FILENAME: "dhparam.pem"
       LDAP_TLS_CA_CRT_FILENAME: "ca.pem"
-      LDAP_TLS_ENFORCE: "true"
-      # LDAP_TLS_ENFORCE: "false"
+      # LDAP_TLS_ENFORCE 一定设置为 false, 某些应用不支持tls通信方式
+      # LDAP_TLS_ENFORCE: "true"
+      LDAP_TLS_ENFORCE: "false"
       # LDAP_TLS_CIPHER_SUITE: "SECURE256:+SECURE128:-VERS-TLS-ALL:+VERS-TLS1.2:-RSA:-DHE-DSS:-CAMELLIA-128-CBC:-CAMELLIA-256-CBC:-VERS-SSL3.0:HIGH:+SSLv3:+TLSv1:MEDIUM:+SSLv2:@STRENGTH:+SHA:+MD5:!NULL"
       LDAP_TLS_CIPHER_SUITE: "SECURE256:-VERS-SSL3.0"
       LDAP_TLS_PROTOCOL_MIN: "3.1"
       # 不要设置成 demand，这个选项可以理解成双向认证，也就是客户端连接ldap时也许要提供证书，也就是客户端也需要有自己的证书
-      LDAP_TLS_VERIFY_CLIENT: "allow"
+      # LDAP_TLS_VERIFY_CLIENT: "demand"
+      LDAP_TLS_VERIFY_CLIENT: "try"
       LDAP_REPLICATION: "false"
       LDAP_REPLICATION_CONFIG_SYNCPROV: "binddn=\"cn=admin,cn=config\" bindmethod=simple credentials=\"${LDAP_CONFIG_PASSWORD}\" searchbase=\"cn=config\" type=refreshAndPersist retry=\"60 +\" timeout=1 starttls=critical"
       LDAP_REPLICATION_DB_SYNCPROV: "binddn=\"cn=admin,${LDAP_BASE_DN}\" bindmethod=simple credentials=\"${LDAP_ADMIN_PASSWORD}\" searchbase=\"${LDAP_BASE_DN}\" type=refreshAndPersist interval=00:00:00:10 retry=\"60 +\" timeout=1 starttls=critical"
@@ -44,8 +46,8 @@ services:
     tty: true
     stdin_open: true
     volumes:
-      - ./ldap/data:/var/lib/ldap
-      - ./ldap/config:/etc/ldap/slapd.d
+      - ./ldap-data/data:/var/lib/ldap
+      - ./ldap-data/config:/etc/ldap/slapd.d
       - ./cert/ldap.pem:/container/service/slapd/assets/certs/ldap.pem
       - ./cert/ldap.key:/container/service/slapd/assets/certs/ldap.key
       - ./cert/ca.pem:/container/service/slapd/assets/certs/ca.pem
